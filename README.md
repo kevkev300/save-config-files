@@ -1,4 +1,4 @@
-## A simple to use automatic file synchronizer in ruby
+## A simple tool to use automatic file synchronizer in ruby
 
 ### How does it work
 1. clone the repo
