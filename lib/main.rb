@@ -2,7 +2,7 @@
 
 require_relative 'copier'
 require_relative 'first_run_assistant'
-require_relative 'git_syncronizer'
+require_relative 'git_synchronizer'
 
 class Main
   attr_reader :copier, :first_run_assistant, :git_syncronizer
@@ -11,7 +11,7 @@ class Main
     @copier = Copier.new
     @path = File.expand_path(__FILE__).gsub(Dir.home, '~')
     @first_run_assistant = FirstRunAssistant.new(copy_location: @copier.copy_location, main_path: @path)
-    @git_syncronizer = GitSyncronizer.new(copy_location: @copier.copy_location)
+    @git_synchronizer = GitSynchronizer.new(copy_location: @copier.copy_location)
   end
 
   def call
@@ -19,9 +19,9 @@ class Main
 
     first_run_assistant.call if first_run_assistant.first_run?
 
-    git_syncronizer.pull
+    git_synchronizer.pull
     copier.copy
-    git_syncronizer.push
+    git_synchronizer.push
   end
 
   def setup

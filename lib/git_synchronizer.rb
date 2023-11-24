@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class GitSyncronizer
+class GitSynchronizer
   attr_reader :copy_location
 
   def initialize(copy_location:)
