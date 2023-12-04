@@ -5,7 +5,7 @@ require_relative 'first_run_assistant'
 require_relative 'git_synchronizer'
 
 class Main
-  attr_reader :copier, :first_run_assistant, :git_syncronizer
+  attr_reader :copier, :first_run_assistant, :git_synchronizer
 
   def initialize
     @copier = Copier.new
