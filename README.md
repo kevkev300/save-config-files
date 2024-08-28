@@ -15,4 +15,4 @@
    [[ -f "$HOME/config_files_syncronizer.sh" ]] && source "$HOME/config_files_syncronizer.sh"
    ```
 5. The automation works like this: the combination of the script from 4. and the script file from 3.3.1 automatically runs the code within `lib/main.rb` once a day as soon as you open your terminal
-6. The sync basically is just and upload sync. The files you define in `lib/file_paths.yml` will be copied to the `COPY_DIR` every time `lib/main.rb` runs (yes, you can always run `ruby lib/main.rb` and do not need to wait for the automation). Then, the copied files will be synced to the Github repository. And voila, you will never loose your config files again.
+6. The sync basically is just an upload sync. The files you define in `lib/file_paths.yml` will be copied to the `COPY_DIR` every time `lib/main.rb` runs (yes, you can always run `ruby lib/main.rb` and do not need to wait for the automation). Then, the copied files will be synced to the Github repository. And voila, you will never loose your config files again.
